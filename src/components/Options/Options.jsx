@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import css from "./Options.module.css";
 
-const Options = ({ updateFeedback, handleResetfeedback, totalFeedback }) => {
+const Options = ({ updateFeedback, handleResetFeedback, total }) => {
   useEffect(() => {
     return () => {};
   }, []);
@@ -20,8 +20,8 @@ const Options = ({ updateFeedback, handleResetfeedback, totalFeedback }) => {
       <button className={css.optionBtn} onClick={() => updateFeedback("bad")}>
         Bad
       </button>
-      {totalFeedback !== 0 && (
-        <button className={css.optionBtn} onClick={handleResetfeedback}>
+      {total !== 0 && (
+        <button className={css.optionBtn} onClick={handleResetFeedback}>
           Reset
         </button>
       )}

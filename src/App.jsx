@@ -16,7 +16,7 @@ function App() {
     return parsedFeedback;
   });
   // const [isVisibleFeedback, setIsVisibleFeedback] = useState(false);
-  const handleResetfeedback = () => {
+  const handleResetFeedback = () => {
     setFeedback(initialFeedback);
   };
   const updateFeedback = (feedbackType) => {
@@ -41,7 +41,8 @@ function App() {
       <Description />
       <Options
         updateFeedback={updateFeedback}
-        handleResetfeedback={handleResetfeedback}
+        handleResetFeedback={handleResetFeedback}
+        total={totalFeedback}
       />
 
       {totalFeedback > 0 ? (
