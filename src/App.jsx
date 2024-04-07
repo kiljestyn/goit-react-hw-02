@@ -24,13 +24,10 @@ function App() {
   };
 
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
-  useEffect(() => {}, [totalFeedback]);
 
   const positiveFeedbackPercentage = Math.round(
     (feedback.good / totalFeedback) * 100
   );
-
-  useEffect(() => {}, [positiveFeedbackPercentage]);
 
   useEffect(() => {
     localStorage.setItem("feedbackValues", JSON.stringify(feedback));
